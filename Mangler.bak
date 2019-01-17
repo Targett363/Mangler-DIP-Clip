@@ -20,7 +20,7 @@ U 1 1 5C26A1B1
 P 3275 5250
 F 0 "U2" H 3250 5250 50  0000 L CNN
 F 1 "SAMD21G18A-AF" H 2975 5125 50  0000 L CNN
-F 2 "Package_DIP:DIP-48_W16.51mm_Socket" H 3125 5300 50  0001 C CNN
+F 2 "Package_DIP:DIP-48_W16.4mm_Socket" H 3125 5300 50  0001 C CNN
 F 3 "" H 3125 5300 50  0001 C CNN
 	1    3275 5250
 	1    0    0    -1  
@@ -508,8 +508,6 @@ Text GLabel 2275 5500 0    50   Input ~ 0
 A3
 Text GLabel 2275 5600 0    50   Input ~ 0
 A4
-Text GLabel 2275 5700 0    50   Input ~ 0
-D8
 Text GLabel 2275 5800 0    50   Input ~ 0
 D9
 Text GLabel 2825 4250 1    50   Input ~ 0
@@ -520,8 +518,6 @@ NoConn ~ 3625 4250
 NoConn ~ 3425 4250
 NoConn ~ 3725 4250
 NoConn ~ 3825 4250
-Text GLabel 4375 5300 2    50   Input ~ 0
-D7
 Text GLabel 4375 5400 2    50   Input ~ 0
 D6
 Text GLabel 4375 5500 2    50   Input ~ 0
@@ -534,18 +530,12 @@ Text GLabel 4375 5800 2    50   Input ~ 0
 D11
 Text GLabel 3825 6300 3    50   Input ~ 0
 D5
-Text GLabel 3725 6300 3    50   Input ~ 0
-D2
 Text GLabel 3025 6300 3    50   Input ~ 0
 D0
 Wire Wire Line
 	3225 6500 3225 6300
 Text GLabel 2925 6300 3    50   Input ~ 0
 D1
-Text GLabel 2825 6300 3    50   Input ~ 0
-D3
-Text GLabel 2725 6300 3    50   Input ~ 0
-D4
 NoConn ~ 3625 6300
 Text GLabel 3900 2225 1    50   Input ~ 0
 SWCLK
@@ -655,20 +645,10 @@ Text GLabel 8800 4225 0    50   Input ~ 0
 D0
 Text GLabel 8800 4325 0    50   Input ~ 0
 D1
-Text GLabel 8800 4425 0    50   Input ~ 0
-D2
-Text GLabel 8800 4525 0    50   Input ~ 0
-D3
-Text GLabel 8800 4625 0    50   Input ~ 0
-D4
 Text GLabel 8800 4725 0    50   Input ~ 0
 D5
 Text GLabel 8800 4825 0    50   Input ~ 0
 D6
-Text GLabel 8800 4925 0    50   Input ~ 0
-D7
-Text GLabel 8800 5025 0    50   Input ~ 0
-D8
 Text GLabel 8800 5125 0    50   Input ~ 0
 D9
 Text GLabel 8800 5325 0    50   Input ~ 0
@@ -790,10 +770,46 @@ F 3 "" H 7625 6275 50  0001 C CNN
 	1    7625 6275
 	1    0    0    -1  
 $EndComp
-Text GLabel 7625 5975 0    50   Input ~ 0
-MOSI
 Text GLabel 7625 6075 0    50   Input ~ 0
+MOSI
+Text GLabel 7625 5975 0    50   Input ~ 0
 SCK
 Text GLabel 7625 6175 0    50   Input ~ 0
 MISO
+$Comp
+L power:GND #PWR?
+U 1 1 5C40DC7F
+P 8500 4525
+F 0 "#PWR?" H 8500 4275 50  0001 C CNN
+F 1 "GND" H 8505 4352 50  0000 C CNN
+F 2 "" H 8500 4525 50  0001 C CNN
+F 3 "" H 8500 4525 50  0001 C CNN
+	1    8500 4525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 4625 8800 4525
+Connection ~ 8800 4525
+Wire Wire Line
+	8800 4525 8800 4425
+Wire Wire Line
+	8800 4525 8500 4525
+Wire Wire Line
+	8800 5025 8800 4975
+$Comp
+L power:GND #PWR?
+U 1 1 5C40ED13
+P 8500 4975
+F 0 "#PWR?" H 8500 4725 50  0001 C CNN
+F 1 "GND" H 8505 4802 50  0000 C CNN
+F 2 "" H 8500 4975 50  0001 C CNN
+F 3 "" H 8500 4975 50  0001 C CNN
+	1    8500 4975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 4975 8800 4975
+Connection ~ 8800 4975
+Wire Wire Line
+	8800 4975 8800 4925
 $EndSCHEMATC
